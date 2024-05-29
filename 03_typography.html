@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Headings, Paragraphs, Typography</title>
+</head>
+<style>
+
+  body {
+    /* You can install a custom font from internet and use it your CSS.
+       Install "WhatFont" extension from chrome to check what font you
+       are using.
+    */
+    font-family: MesloLGS NF, Consolas, "Courier New", monospace;
+    /* font-family: Blanco medium, MesloLGS NF, Consolas, "Courier New", monospace; */
+    /* font-family: Blanco, MesloLGS NF, Consolas, "Courier New", monospace; */
+
+    /* font-size: 18px, line-height: 24px, font-family: AvertaStd-Regular*/
+    /* font: 18px/24px Fira Code, Consolas, "Courier New", monospace; */
+
+    /* font-family: Dank Mono, MesloLGS NF, Consolas, "Courier New", monospace; */
+  }
+
+  details{
+    width: 400px;
+    border: 1px solid #aaa;
+    padding: 0.5em 0.8em;
+    border-radius: 5px;
+  }
+
+  details[open] {
+    padding: .5em;
+  }
+
+  details[open] summary {
+      font-style: italic;
+      border-bottom: 1px solid #aaa;
+      padding-bottom: 0.5em;
+  }
+
+
+</style>
+
+<body>
+  <!-- 1️⃣ Headings
+
+    Reference : https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs
+
+    There are six heading elements: <h1>, <h2>, <h3>, <h4>, <h5>, and <h6>. Each element represents a different level of content in the document; <h1> represents the main heading, <h2> represents subheadings, <h3> represents sub-subheadings, and so on.
+
+    For example, in this story, the <h1> element represents the title of the story, the <h2> elements represent the title of each chapter, and the <h3> elements represent sub-sections of each chapter
+
+    Make sure you are using the correct elements, giving your content the correct meaning, function, or appearance. In this context, the <h1> element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
+  -->
+  <h1>Heading 1</h1>
+  <h2>Heading 2</h2>
+  <h3>Heading 3</h3>
+  <h4>Heading 4</h4>
+  <h5>Heading 5</h5>
+  <h6>Heading 6</h6>
+
+  <!-- This is a <span> element. It has no semantics.
+       You can make span tag as <h1> tag using CSS but since it has no semantic value, it will not get any of the extra benefits. It is a good idea to use the relevant HTML element for the job.
+  -->
+  <span style="font-size: 32px; margin: 21px 0; display: block;">Is this a top level heading?</span>
+
+  <p>Hello, <span style="text-decoration-line: underline">World</span></p>
+
+  <!--
+    Search engines indexing your page consider the contents of headings as important keywords for influencing the page's search rankings. Without headings, your page will perform poorly in terms of SEO (Search Engine Optimization).
+
+    ⭐️ Severely visually impaired people often don't read web pages; they listen to them instead. This is done with software called a screen reader. This software provides ways to get fast access to given text content. Among the various techniques used, they provide an outline of the document by reading out the headings, allowing their users to find the information they need quickly. If headings are not available, they will be forced to listen to the whole document read out loud.
+  -->
+
+  <!-- 2️⃣ Paragraph -->
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorem tempore, sunt voluptatum <strong>exercitationem eius nulla consectetur!</strong> Facilis aspernatur sapiente, incidunt optio odio consequuntur eos alias possimus hic laborum consectetur numquam aliquid dolorem <em>voluptates distinctio assumenda? Natus culpa veritatis, possimus laborum dolores</em> autem voluptas necessitatibus itaque minus hic blanditiis soluta ut enim quam esse laboriosam <del>iusto harum tenetur animi impedit</del> explicabo architecto molestias nulla in.
+  <!-- Line Break -->
+  <br>
+  <br>
+  Itaque ratione rem esse iusto, dolor eveniet expedita, eum quia, totam culpa pariatur! Impedit inventore suscipit qui placeat explicabo in voluptas
+  <!-- Horizontal Rule -->
+  <hr>
+  facilis obcaecati deserunt dolor deleniti quisquam voluptatem? Fugit nam, magni explicabo error porro dolores?</p>
+
+  <!-- 3️⃣ <small> tag
+
+    The HTML <small> tag makes text one font size smaller in the HTML document. This tag is also commonly referred to as the <small> element.
+
+    1. The <small> tag is used to make the text one size smaller (ie: from x-large to large, large to medium, medium to small).
+    2. The <small> tag can not make the text smaller than the browser's minimum font size.
+  -->
+  <p>This is a paragraph and <small>smaller text goes here</small></p>
+
+  <!-- 4️⃣ <details>: The Details disclosure element
+
+    The <details> HTML element creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label must be provided using the <summary> element.
+
+    The <summary> element is used along with the <details> element and provides a summary visible to the user.
+
+    When the summary is clicked by the user, the content placed inside the <details> element becomes visible which was previously hidden.
+
+    💡 Note : It has default tabindex set to 0, so when the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents.
+
+    Twists: " ▶ " (little triangle)
+
+    There are 2 states :
+      1. Close => <details>
+      2. Open => <details open> open attribute which is a boolean attribute gets added in the details tag
+
+    Reference:
+      1. Detail tag :- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+      2. Summary tag :- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary
+
+  -->
+  <details>
+    <summary>Spoiler</summary>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione adipisci quia at accusamus a sint labore magnam sequi ad consectetur.</p>
+  </details>
+</body>
+</html>

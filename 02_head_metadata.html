@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 1️⃣ What is Meta tags ?
+
+      Reference: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_%3Cmeta%3E_element
+
+      Metadata is data that describes data, and HTML has an "official" way of adding metadata to a document  the <meta> element.
+
+      Many <meta> elements include name and content attributes:
+
+      - Name specifies the type of meta element it is; what type of information it contains.
+      - Content specifies the actual meta content.
+    -->
+
+    <!-- <meta charset="ISO-8859-1" /> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="This is my website description" />
+    <meta name="keywords" content="web development, web design" />
+    <!-- Do not index page -->
+    <meta name="robots" content="NOINDEX, NOFOLLOW" />
+
+    <!-- 2️⃣ Adding custom icons
+
+         Reference: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site
+
+         To further enrich your site design, you can add references to custom icons in your metadata, and these will be displayed in certain contexts. Favicons (Short for “favorite icon) are commonly displayed on tabs at the top of a web browser.
+
+         Formats can be used: .ICO (prefered), .PNG and .SVG
+    -->
+    <link rel="icon" href="src/images/favicon-48x48.97046865.png" />
+
+    <!-- 3️⃣ Applying CSS and JavaScript to HTML
+
+          Reference: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#applying_css_and_javascript_to_html
+
+          CSS : The <link> element should always go inside the head of your document. This takes two attributes, rel="stylesheet", which indicates that it is the document's stylesheet, and href, which contains the path to the stylesheet file.
+
+          JS : The <script> element should also go into the head.
+          It include a "src" attribute containing the path to the JavaScript you want to load, and "defer", which basically instructs the browser to load the JavaScript after the page has finished parsing the HTML. This is useful as it makes sure that the HTML is all loaded before the JavaScript runs, so that you don't get errors resulting from JavaScript trying to access an HTML element that doesn't exist on the page yet.
+          Read more at:
+
+          NOTE: Note: The <script> element may look like an empty element, but it's not, and so needs a closing tag. Instead of pointing to an external script file, you can also choose to put your script inside the <script> element.
+    -->
+    <link rel="stylesheet" href="src/src/css/style.css" />
+    <script src="src/scripts/index.js" defer></script>
+    <title>Meta Tags</title>
+  </head>
+
+  <body>
+    <h1>Meta tags and some other tags</h1>
+    <hr />
+    <p>
+      We hold these truths to be <del>sacred &amp; undeniable</del>
+      <ins>self-evident</ins>.
+    </p>
+    <p>
+      We hold these truths to be <em>sacred &amp; undeniable</em> self-evident.
+    </p>
+  </body>
+</html>

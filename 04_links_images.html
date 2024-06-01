@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Links & Images</title>
+  </head>
+  <body>
+    <h1>Links & Images</h1>
+    <hr />
+
+    <!-- 1️⃣ Hyperlinks
+
+        🔗 Reference : https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#what_is_a_hyperlink
+
+        - Hyperlinks are one of the most exciting innovations the Web has to offer.
+        - They've been a feature of the Web since the beginning, and are what makes the Web a web. Hyperlinks allow us to link documents to other documents or resources, link to specific parts of documents, or make apps available at a web address.
+        - Almost any web content can be converted to a link so that when clicked or otherwise activated the web browser goes to another web address (URL).
+
+    -->
+
+    <!-- 2️⃣ Attributes
+
+      Attributes contain extra information about the element that won't appear in the content.
+
+      In this example, the class attribute is an identifying name used to target the element with style information.
+
+      An attribute should have 👇🏻:
+
+      A space between it and the element name. (For an element with more than one attribute, the attributes should be separated by spaces too.)
+
+      The attribute name, followed by an equal sign.
+      An attribute value, wrapped with opening and closing quote marks.
+    -->
+
+    <p>
+      I'm creating a link to
+      <a
+        class="anchor-style"
+        href="https://www.mozilla.org/en-US/"
+        title="The best place to find more information about Mozilla's
+                mission and how to contribute"
+        >the Mozilla homepage</a
+      >.
+    </p>
+
+    <!-- 📌 Note: A link title is only revealed on mouse hover, which means that people relying on keyboard controls or touchscreens to navigate web pages will have difficulty accessing title information. If a title's information is truly important to the usability of the page, then you should present it in a manner that will be accessible to all users, for example by putting it in the regular text. -->
+
+    <!--
+        4️⃣ External link
+
+        Element <a>. This stands for anchor. An anchor can make the text it encloses into a hyperlink.
+    -->
+    <p>
+      <a href="http://google.com">Click For Google</a>
+    </p>
+    <p>
+      <a href="http://google.com" target="_blank">Click For Google</a>
+    </p>
+
+    <!--
+        Almost any content can be made into a link
+        Eg: If you have an image you want to make into a link, use the <a> element and reference the image file with the <img> element.
+    -->
+    <a href="https://www.mozilla.org/en-US/">
+      <img
+        src="src/images/helpshift.jpeg"
+        alt="mozilla logo that links to the mozilla homepage"
+      />
+    </a>
+
+    <!-- 4️⃣ Document fragment
+
+      🔗 Reference: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#document_fragments
+
+      - It's possible to link to a specific part of an HTML document, known as a document fragment, rather than just to the top of the document.
+
+      - To do this you first have to assign an id attribute to the element you want to link to.
+
+      - It normally makes sense to link to a specific heading, so this would look something like the following:
+    -->
+    <h2 id="Mailing_address">Mailing address</h2>
+
+    <!--
+      Then to link to that specific id, you'd include it at the end of the URL, preceded by a hash/pound symbol (#), for example:
+    -->
+
+    <p>
+      Want to write us a letter? Use our
+      <a href="contacts.html#Mailing_address">mailing address</a>.
+    </p>
+
+    <!--
+      You can even use the document fragment reference on its own to link to another part of the current document
+    -->
+    <p>
+      The
+      <a href="#Mailing_address">company mailing address</a>
+      can be found at the bottom of this page.
+    </p>
+
+    <!-- 5️⃣ Internal link -->
+    <p>
+      <a href="/04_typography.html">Typography</a>
+    </p>
+
+    <!--
+      5️⃣ Linking to Linking to non-HTML resources
+
+      🔗 Reference : https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#linking_to_non-html_resources_%E2%80%94_leave_clear_signposts
+
+      When linking to a resource that will be downloaded (like a PDF or Word document), streamed (like video or audio), or has another potentially unexpected effect (opens a popup window, or loads a Flash movie), you should add clear wording to reduce any confusion.
+    -->
+    <p>
+      <a href="https://www.example.com/large-report.pdf">
+        Download the sales report (PDF, 10MB)
+      </a>
+    </p>
+
+    <p>
+      <a href="https://www.example.com/video-stream/" target="_blank">
+        Watch the video (stream opens in separate tab, HD quality)
+      </a>
+    </p>
+
+    <p>
+      <a href="https://www.example.com/car-game">
+        Play the car game (requires Flash)
+      </a>
+    </p>
+
+    <!-- 6️⃣ Download links
+
+      🔗 Reference: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#use_the_download_attribute_when_linking_to_a_download
+
+      When you are linking to a resource that's to be downloaded rather than opened in the browser, you can use the download attribute to provide a default save filename. Here's an example with a download link to the latest Windows version of Firefox:
+    -->
+    <p>
+      <a
+        href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+        download="firefox-latest-64bit-installer.exe"
+      >
+        Download Latest Firefox for Windows (64-bit) (English, US)
+      </a>
+    </p>
+
+    <!-- 7️⃣ Mail links
+
+        🔗 Reference: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#e-mail_links
+
+        - It's possible to create links or buttons that, when clicked, open a new outgoing email message rather than linking to a resource or page.
+
+        - This is done using the <a> element and the mailto: URL scheme.
+    -->
+    <p>
+      <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+    </p>
+
+    <!-- mail links with subject, cc, and body -->
+    <p>
+      <a
+        href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email"
+      >
+        Send mail with cc, bcc, subject and body
+      </a>
+    </p>
+    <br />
+
+    <!--
+      📝 Assignment : https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#active_learning_creating_a_navigation_menu
+    -->
+
+    <!-- Img
+    Some elements have no content and are called empty elements. <img> is an empty tag.
+
+    Attributes :
+      1. src => the source from which the browser would read the image
+      2. alt => The alt ( alternative ) attribute holds a text description of the image, which isn't mandatory but is incredibly useful for accessibility — screen readers read this description out to their users so they know what the image means. if the image woudn't get loaded because of network issue, content block, wrong source provided then alt text will get display on the page.
+
+      Setting this attribute to an empty string (alt="") indicates that the image is not a key part of the content (it's decoration or a tracking pixel), and that non-visual browsers may omit it from rendering.
+
+    Image format:
+      - PNG, JPEG, APNG, AVIF, GIF, SVG, WEBP.
+      - Formats like WebP and AVIF are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images. WebP is widely supported while AVIF lacks support in safari
+      - SVG remains the recommended format for images that must be drawn accurately at different sizes
+    -->
+
+    <!-- Local image -->
+    <img src="src/images/sample.jpg" alt="My Image" width="200" />
+    <br />
+
+    <!-- Remote image -->
+    <img src="https://source.unsplash.com/200x200/?building" alt="My Image 2" />
+    <br />
+
+    <!-- set width and height -->
+    <img
+      src="https://source.unsplash.com/200x200/?nature"
+      alt="My Image 2"
+      width="400"
+      height="500"
+    />
+
+    <!-- set alt="" as empty string to hide the broken image -->
+    <p>Alt = ""</p>
+    <img src="hello" alt="" />
+
+    <br />
+
+    <!-- We can add Alternate source image if 1st source image is not rendered properly -->
+    <img
+      src="https://source.unsplash.com/200x200/?mountan"
+      alt="My Image 3"
+      srcset="https://source.unsplash.com/200x200/?sun"
+    />
+
+    <!--
+      Image loading errors:
+
+      If an error occurs while loading or rendering an image, and an onerror event handler has been set on the error event, that event handler will get called. This can happen in a number of situations, including:
+
+      1. The src attribute is empty ("") or null.
+      2. The src URL is the same as the URL of the page the user is currently on.
+      3. The image is corrupted in some way that prevents it from being loaded.
+      4. The image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the <img> element's attributes.
+      5. The image is in a format not supported by the user agent.
+    -->
+    <img src="" onerror="alert('image src attribute is empty')" />
+    <!-- <img
+      src="http://127.0.0.1:5500/05_links_images.html"
+      onerror="alert('hello, world')"
+    /> -->
+  </body>
+</html>

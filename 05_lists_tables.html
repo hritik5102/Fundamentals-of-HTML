@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lists & Tables</title>
+  </head>
+  <style>
+    th {
+      border: 2px solid rgb(69, 219, 56);
+    }
+    table {
+      border: 2px solid blue;
+    }
+    td[colspan] {
+      background-color: rgb(204, 204, 204);
+    }
+    p {
+      font-size: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+  </style>
+  <body>
+    <h1>List & tables</h1>
+    <hr />
+
+    <!-- 1️⃣ Unordered lists
+
+        🔗 Reference : https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#unordered
+
+        Every unordered list starts off with a <ul> element—this wraps around all the list items.
+    -->
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+    <!-- Define type attribute in Ul tags -->
+    <!-- Disc, Square, circle -->
+    <ul type="Square">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+
+    <!-- 2️⃣ Ordered Lists
+
+      🔗 Reference: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#ordered
+
+      Ordered lists are lists in which the order of the items does matter.
+
+      The markup structure is the same as for unordered lists, except that you have to wrap the list items in an <ol> element, rather than <ul>
+    -->
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ol>
+
+    <!-- Define type attribute in Ol tags -->
+    <ol type="I">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ol>
+
+    <!-- 3️⃣ Nested lists
+
+      🔗 Reference: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#nesting_lists
+
+      It is perfectly ok to nest one list inside another one. You might want to have some sub-bullets sitting below a top-level bullet.
+
+    -->
+    <!-- Example : 1 -->
+    <ul>
+      <li>Item 1</li>
+      <li>
+        Item 2
+        <ul>
+          <li>Nested Item 1</li>
+          <li>Nested Item 2</li>
+        </ul>
+      </li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+
+    <!-- Example : 2 -->
+    <ol>
+      <li>Remove the skin from the garlic, and chop coarsely.</li>
+      <li>
+        Remove all the seeds and stalk from the pepper, and chop coarsely.
+      </li>
+      <li>Add all the ingredients into a food processor.</li>
+      <li>
+        Process all the ingredients into a paste.
+        <ul>
+          <li>
+            If you want a coarse "chunky" hummus, process it for a short time.
+          </li>
+          <li>If you want a smooth hummus, process it for a longer time.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <!-- Tables
+
+      "thead" => table header
+      "tbody" => table body
+      "tfoot" => table footer
+
+      "tr" => table row
+      "th" => table header
+      "td" => table data cell
+
+      There is nothing like "tc" => table column because column is made up of combination of "tr" and td
+
+      Note: The caption is a required element under accessibility guidelines. "thead" is essentially a box to hold your headings for the table. It is used along with "tbody" and "tfoot" to make up the entirety of a table - header, body, footer. On the otherhand, "th" is a single heading element.
+
+      Vertical aligment :- Top, Middle, Bottom
+      Horizontal aligment :- Left, Center, Right
+
+      Cell padding :       Cell padding (refers to space between content and border of the table)
+          |               ↙️
+          --- > border →[↔️ content ]
+
+
+      Cell spacing :       Cell spacing (refers to space between table data cells )
+          |               ↙️
+          --- >      [ A ↔️ B ]
+                     [ C ↔️ D ]
+
+      Note 📌:
+        1.  Do not put tables inside table ( NOT RECOMMENDED! )
+        2.  Table attribute like cell padding, cell spacing, width, height, valign, align, border are
+            deprecated, recommended practice to use css properties instead of using these attributes
+            Eg:
+                    Cell padding  < ----------------- > Padding
+                    Cell spacing  < ----------------- > border-spacing
+                          Border  < ----------------- > Border
+                          Valign  < ----------------- > Vertical-align
+                           align  < ----------------- > align
+                           width  < ----------------- > width
+                          height  < ----------------- > height
+    -->
+
+    <!-- Table Attributes: border, width, height, cell-padding, cell-spacing -->
+    <!-- This is just as example on how to use these properties, but it's recommended to use them -->
+    <p>Sample table</p>
+    <table
+      style="text-align: center"
+      border="1"
+      width="200px"
+      height="200px"
+      cellspacing="10px"
+      cellpadding="10px"
+    >
+      <thead>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+    <!--
+      Two types of span :-
+
+            1.  rowspan
+            2.  colspan
+
+     -->
+    <!-- Working with colspan -->
+    <p>Colspan</p>
+    <table
+      style="text-align: center"
+      border="1"
+      width="200px"
+      height="200px"
+      cellspacing="10px"
+      cellpadding="10px"
+    >
+      <thead>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td colspan="2">10</td>
+          <!-- <td>11</td> -->
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+
+    <!-- Example of colspan -->
+    <table style="width: 600px">
+      <thead>
+        <tr>
+          <th colspan="2">A</th>
+          <th colspan="2">B</th>
+          <th colspan="2">C</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+    <!-- Working with rowspan -->
+    <p>Rowspan</p>
+
+    <table
+      style="text-align: center"
+      border="1"
+      width="200px"
+      height="200px"
+      cellspacing="10px"
+      cellpadding="10px"
+    >
+      <thead>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td rowspan="3" align="right" valign="bottom">6</td>
+        </tr>
+        <tr>
+          <!-- When we change the height of one data cell -->
+          <!-- Then parent table height is try to adjust itself -->
+          <!-- And compress the height of other data cells. -->
+          <td height="50px">7</td>
+          <td>8</td>
+          <!-- <td>9</td> -->
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>11</td>
+          <!-- <td>12</td> -->
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <table style="width: 600px; text-align: left">
+      <thead>
+        <tr>
+          <th>Item / Desc.</th>
+          <th>Qty.</th>
+          <th>@</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Paperclips (Box)</td>
+          <td>100</td>
+          <td>1.15</td>
+          <td>115.00</td>
+        </tr>
+        <tr>
+          <td>Paper (Case)</td>
+          <td>10</td>
+          <td>45.99</td>
+          <td>459.90</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Wastepaper Baskets</td>
+          <td>2</td>
+          <td>17.99</td>
+          <td>35.98</td>
+        </tr>
+        <tr>
+          <td colspan="3">Subtotal</td>
+          <td>610.88</td>
+        </tr>
+        <tr>
+          <td colspan="2">Tax</td>
+          <td>7%</td>
+          <td>42.76</td>
+        </tr>
+        <tr>
+          <td colspan="3">Total</td>
+          <td>653.64</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+
+    <!-- Working with caption -->
+    <p>Caption and Footer</p>
+    <table style="width: 800px; height: 200px; text-align: center">
+      <caption>
+        The caption describes the table.
+      </caption>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>jdoe@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Kate</td>
+          <td>Smith</td>
+          <td>kate@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Jeff</td>
+          <td>Wilson</td>
+          <td>jeff@gmail.com</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">This footer of the table</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <br />
+  </body>
+</html>

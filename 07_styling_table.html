@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styling table</title>
+  </head>
+  <style>
+    .style-table {
+      border-collapse: collapse;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      /* width: 400px; */
+      font-size: 1em;
+      margin: 25px auto;
+      text-align: left;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .style-table thead tr th {
+      background-color: rgb(82, 71, 243);
+      padding: 12px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .style-table tbody tr td {
+      padding: 12px;
+    }
+    .style-table tbody tr {
+      border-bottom: 1px solid #e6e6e6;
+    }
+    .style-table tbody tr:nth-child(2) {
+      color: rgb(82, 71, 243);
+    }
+    .style-table tbody tr:nth-last-child(1) {
+      border-bottom: 1px solid rgb(82, 71, 243);
+    }
+  </style>
+  <body>
+    <table class="style-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Phone</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cassie</td>
+          <td>10</td>
+          <td>782.875.0019</td>
+          <td>Cassie@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Danika</td>
+          <td>11</td>
+          <td>391.251.5457 x1056</td>
+          <td>Danika@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Domenick</td>
+          <td>12</td>
+          <td>1-682-847-9328 x502</td>
+          <td>Domenick@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

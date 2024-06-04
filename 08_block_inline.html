@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Inline vs Block</title>
+  </head>
+  <style>
+    p {
+      border: 2px solid green;
+    }
+    a,
+    img,
+    em,
+    strong {
+      border: 2px solid blue;
+    }
+  </style>
+  <body>
+    <h1>Block vs Inline element</h1>
+    <hr />
+    <!-- There are two important categories of elements to know in HTML: block-level
+    elements and inline elements. -->
+
+    <!-- Block element 
+      
+      Block-level elements form a visible block on a page. 
+      
+      A block-level element appears on a new line following the content that precedes it. 
+      
+      Any content that follows a block-level element also appears on a new line. 
+      
+      Block-level elements are usually structural elements on the page. 
+
+      For example, a block-level element might represent headings, paragraphs, lists, navigation menus, or footers. 
+      
+      A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.     
+    -->
+
+    <h1>Block vs Inline element</h1>
+    <hr />
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga doloribus
+      aperiam dicta <strong>voluptatibus ut, quisquam</strong> aut perferendis
+      sequi, ad ullam quae eius eveniet nihil? Ab ipsam praesentium voluptatum
+      dolorem temporibus.
+    </p>
+    <p>Lorem</p>
+    <ul>
+      <li>Item</li>
+      <li>Item</li>
+    </ul>
+    <div>I am div tag</div>
+    <div>I am div tag</div>
+
+    <!-- Inline element
+      
+      Inline elements are contained within block-level elements, and surround only small parts of the document’s content (not entire paragraphs or groupings of content). 
+
+      An inline element will not cause a new line to appear in the document. 
+
+      It is typically used with text, for example an <a> element creates a hyperlink, and elements such as <em> or <strong> create emphasis.
+   -->
+    <strong>I am a strong tag</strong> <strong>I am a strong tag</strong>
+    <em>I am em tag</em> <em>I am a em tag</em>
+
+    <a style="border: 2px red solid" href="#">Anchor tag</a>
+    <a style="border: 2px red solid" href="#">Anchor tag</a>
+    <img src="https://source.unsplash.com/200x200/?building" alt="Image 1" />
+    <img src="https://source.unsplash.com/200x200/?mountain" alt="Image 2" />
+
+    <br />
+    <!-- Inline + Block element  -->
+    <strong>I am strong tag</strong>
+    <p>I am paragraph tag</p>
+  </body>
+</html>

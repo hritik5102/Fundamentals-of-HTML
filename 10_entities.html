@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Entities</title>
+  </head>
+  <body>
+    <h1>HTML Entities</h1>
+    <hr />
+
+    <!-- HTML chops of the spaces present between the content 
+       
+      To preserve the space we need to use, &ndsp stands for non breaking space 
+      
+      No matter how much whitespace you use inside HTML element content 
+      (which can include one or more space character, but also line breaks), 
+      the HTML parser reduces each sequence of whitespace to a single space when rendering the code.
+    -->
+    <!-- Non breaking space -->
+    <p>Hello, my name is &nbsp; &nbsp; &nbsp; &nbsp;HTML</p>
+    <!-- Greater than and less than -->
+
+    <!-- Wrong way -->
+    <p>In HTML, you define a paragraph using the</p>
+    <p>element.</p>
+
+    <!-- Right way -->
+    <p>In HTML, you define a paragraph using the &lt;p&gt; element.</p>
+    <p>5 &gt; 2</p>
+    <p>5 &#62; 2</p>
+    <p>1 &lt; 2</p>
+    <p>1 &#60; 2</p>
+    <!-- Copyright -->
+    <p>&copy;</p>
+    <p>&reg;</p>
+    <!-- Currency -->
+    <p>&cent;</p>
+    <p>&pound;</p>
+    <p>&yen;</p>
+    <p>&euro;</p>
+    <!-- Suits -->
+    <p>&spades;</p>
+    <p>&clubs;</p>
+    <p>&hearts;</p>
+    <p>&diams;</p>
+
+    <!-- Coputer code -->
+    <code> &lt;?php echo 'Hello' ?&gt; </code>
+    <p>Save the file by pressing <kbd>Ctrl + S</kbd></p>
+
+    <!-- Reference : https://dev.w3.org/html5/html-author/charref -->
+  </body>
+</html>

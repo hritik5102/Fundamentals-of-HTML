@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced text formatting</title>
+  </head>
+  <style>
+    body {
+      font-family: Fira code, Consolas, "Courier New", monospace;
+    }
+  </style>
+  <body>
+    <!-- 1️⃣ Description list 
+      
+      🔗 Reference : https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#description_lists
+      
+      - The purpose of these lists is to mark up a set of items and their associated descriptions, such as terms and definitions, or questions and answers.
+
+      - Description lists use a different wrapper than the other list types (ul and ol) — <dl>.
+      - In addition each term is wrapped in a <dt> (description term) element, and each description is wrapped in a <dd> (description definition) element. 
+    -->
+    <h1>Description list</h1>
+    <hr />
+
+    <dl>
+      <dt>soliloquy</dt>
+      <dd>
+        In drama, where a character speaks to themselves, representing their
+        inner thoughts or feelings and in the process relaying them to the
+        audience (but not to other characters.)
+      </dd>
+      <dt>monologue</dt>
+      <dd>
+        In drama, where a character speaks their thoughts out loud to share them
+        with the audience and any other characters present.
+      </dd>
+      <dt>aside</dt>
+      <dd>
+        In drama, where a character shares a comment only with the audience for
+        humorous or dramatic effect. This is usually a feeling, thought, or
+        piece of additional background information.
+      </dd>
+    </dl>
+
+    <!-- 📌 Note that it is permitted to have a single term with multiple descriptions, for example: -->
+    <dl>
+      <dt>aside</dt>
+      <dd>
+        In drama, where a character shares a comment only with the audience for
+        humorous or dramatic effect. This is usually a feeling, thought, or
+        piece of additional background information.
+      </dd>
+      <dd>
+        In writing, a section of content that is related to the current topic,
+        but doesn't fit directly into the main flow of content so is presented
+        nearby (often in a box off to the side.)
+      </dd>
+    </dl>
+  </body>
+</html>

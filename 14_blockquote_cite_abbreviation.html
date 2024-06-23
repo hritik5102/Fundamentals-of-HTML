@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block and Inline quotations</title>
+  </head>
+  <body>
+    <h1>Block and Inline quotations</h1>
+    <hr />
+
+    <!-- 1️⃣ Blockquotes 
+
+      🔗 Reference : https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#blockquotes
+
+      If a section of block level content (be it a paragraph, multiple paragraphs, a list, etc.) 
+      is quoted from somewhere else, you should wrap it inside a <blockquote> element to signify this, 
+      and include a URL pointing to the source of the quote inside a cite attribute. For example, the 
+      following markup is taken from the MDN <blockquote> element page:
+     -->
+    <p>
+      The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+      <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
+      an extended quotation.
+    </p>
+
+    <!-- To turn this into a block quote, we would just do this: -->
+
+    <p>Here below is a blockquote...</p>
+    <blockquote
+      cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+    >
+      <p>
+        The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+        <em>HTML Block Quotation Element</em>) indicates that the enclosed text
+        is an extended quotation.
+      </p>
+    </blockquote>
+
+    <!-- 2️⃣ Inline quotations 
+      
+      🔗 Reference: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#inline_quotations
+
+      Inline quotations work in exactly the same way, except that they use the <q> element. 
+      For example, the below bit of markup contains a quotation from the MDN <q> page:
+
+      The quote element — <q> — is intended for short quotations that don't require paragraph breaks.
+
+      Browser default styling will render this as normal text put in quotes to indicate a quotation
+    -->
+    <p>
+      The quote element — <code>&lt;q&gt;</code> — is
+      <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+        >intended for short quotations that don't require paragraph breaks.</q
+      >
+    </p>
+
+    <!-- 3️⃣ Cite tag 
+
+       Referencce : https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#citations
+
+      There is a <cite> element, but this is meant to contain the title of the resource being quoted, 
+      e.g. the name of the book. There is no reason, however, why you couldn't link the text inside 
+      <cite> to the quote source in some way:
+
+      Citations are styled in italic font by default.
+    -->
+    <p>
+      According to the
+      <a href="/en-US/docs/Web/HTML/Element/blockquote">
+        <cite>MDN blockquote page</cite></a
+      >:
+    </p>
+
+    <blockquote
+      cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+    >
+      <p>
+        The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
+        <em>HTML Block Quotation Element</em>) indicates that the enclosed text
+        is an extended quotation.
+      </p>
+    </blockquote>
+
+    <p>
+      The quote element — <code>&lt;q&gt;</code> — is
+      <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+        >intended for short quotations that don't require paragraph breaks.</q
+      >
+      -- <a href="/en-US/docs/Web/HTML/Element/q"> <cite>MDN q page</cite></a
+      >.
+    </p>
+
+    <!-- 4️⃣ Abbreviations 
+
+      🔗 Reference: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations
+    
+     <abbr> — this is used to wrap around an abbreviation or acronym, and provide a full expansion of the term. 
+    -->
+    <p>
+      We use
+      <a href="#" title="ABCD">
+        <abbr title="Hypertext Markup Language">HTML</abbr>
+      </a>
+      to structure our web documents.
+    </p>
+
+    <p>
+      I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen
+      with the chainsaw.
+    </p>
+  </body>
+</html>

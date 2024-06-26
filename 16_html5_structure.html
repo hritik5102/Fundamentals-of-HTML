@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Semantic Tags</title>
+  </head>
+  <body>
+    <!-- Reference : https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure#basic_sections_of_a_document -->
+
+    <!-- Header  
+      
+      - Here is our main header that is used across all the pages of our website 
+
+      - Usually a big strip across the top with a big heading, logo, and perhaps a tagline.       
+      This usually stays the same from one webpage to another. 
+
+    -->
+    <header>
+      <h1>Hello, world</h1>
+    </header>
+
+    <!-- Navigation
+
+      - Links to the site's main sections; usually represented by menu buttons, links, or tabs. 
+      
+      - Like the header, this content usually remains consistent from one webpage to another — having inconsistent navigation on your website will just lead to confused, frustrated users. 
+      
+      - Many web designers consider the navigation bar to be part of the header rather than an individual component, but that's not a requirement; in fact, some also argue that having the two separate is better for accessibility, as screen readers can read the two features better if they are separate.
+
+    -->
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Portfolio</a></li>
+      </ul>
+
+      <!-- A Search form is another common non-linear way to navigate through a website. -->
+
+      <form action="">
+        <input
+          type="search"
+          name="search"
+          id="search"
+          placeholder="search query"
+        />
+        <input type="submit" value="Go!" />
+      </form>
+    </nav>
+
+    <!-- Here is our page's main content 
+    
+      - A big area in the center that contains most of the unique content of a given webpage, for example, the video you want to watch, or the main story you're reading, or the map you want to view, or the news headlines, etc. This is the one part of the website that definitely will vary from page to page!
+
+    -->
+
+    <main>
+      <!-- It contains an section -->
+
+      <section>
+        <!-- 
+          
+          Some peripheral info, links, quotes, ads, etc. Usually, this is contextual to what is contained in the main content (for example on a news article page, the sidebar might contain the author's bio, or links to related articles) but there are also cases where you'll find some recurring elements like a secondary navigation system. 
+          
+          It contains an article.  
+        -->
+
+        <article>
+          <h2>Article heading</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, quod.
+          </p>
+        </article>
+        <article>
+          <h3>Article subsection 1</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat
+            repellendus animi praesentium alias reprehenderit magnam sunt.
+            Cupiditate rem officia quas a non, tempora quibusdam culpa repellat
+            autem voluptatibus nisi eum. Nam, veniam. Sint dolor eveniet, ut est
+            corporis accusantium nulla modi excepturi quia numquam doloribus,
+            voluptas repellendus ipsam sit id?
+          </p>
+        </article>
+        <article>
+          <h3>Article subsection 2</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+            maxime sint, voluptate repellendus, aperiam blanditiis facilis harum
+            vel dolorum, ratione reiciendis. Dicta, laudantium laboriosam
+            expedita obcaecati excepturi alias aspernatur fuga enim officiis
+            architecto minus molestias accusamus incidunt facere temporibus
+            quaerat suscipit maxime molestiae, doloribus sed fugit fugiat
+            reprehenderit corrupti. Eos?
+          </p>
+        </article>
+
+        <!-- the aside content can also be nested within the main content -->
+
+        <aside>
+          <h2>Related</h2>
+
+          <ul>
+            <li><a href="#">Oh I do like to be beside the seaside</a></li>
+            <li><a href="#">Oh I do like to be beside the sea</a></li>
+            <li><a href="#">Although in the North of England</a></li>
+            <li><a href="#">It never stops raining</a></li>
+            <li><a href="#">Oh well...</a></li>
+          </ul>
+        </aside>
+      </section>
+    </main>
+
+    <!-- And here is our main footer that is used across all the pages of our website 
+    
+        It's a strip across the bottom of the page that generally contains fine print, copyright notices, or contact info. It's a place to put common information (like the header) but usually, that information is not critical or secondary to the website itself. 
+        
+        The footer is also sometimes used for SEO purposes, by providing links for quick access to popular content.
+    -->
+
+    <footer>copyright &copy; by @Hritik Jaiswal, All rights reserved.</footer>
+  </body>
+</html>

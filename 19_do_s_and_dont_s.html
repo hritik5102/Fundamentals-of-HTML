@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do's and Don't</title>
+  </head>
+  <body>
+    <h1>Do's And Don't</h1>
+    <hr />
+
+    <!-- 1️⃣ Upper and Lower case tags 
+        
+        Reference: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#what_is_html
+
+        Note: Tags in HTML are case-insensitive. This means they can be written in uppercase or lowercase. For example, a <title> tag could be written as <title>, <TITLE>, <Title>, <TiTlE>, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.
+    -->
+
+    <!-- 2️⃣ Right and Wrong way of nesting 
+        
+        Reference:https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#nesting_elements 
+        
+        Elements can be placed within other elements. This is called nesting.  
+    -->
+
+    <!-- Do -->
+    <p>My cat is <strong>very</strong> grumpy.</p>
+
+    <!-- Don't -->
+    <p>My cat is <strong>very grumpy.</p></strong>
+
+    <!-- 
+        The tags have to open and close in a way that they are inside or outside one another. 
+        With the kind of overlap in the example above, the browser has to guess at your intent.         
+        This kind of guessing can result in unexpected results. 
+    -->
+
+    <!-- 3️⃣ Omitting quotes around attribute values 
+        
+        Reference: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#omitting_quotes_around_attribute_values  
+
+        If you look at code for a lot of other sites, you might come across a number of strange markup     styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. For example, if we revisit our link example from earlier, we could write a basic version with only the href attribute, like this: 
+    -->
+
+    <a href=https://www.mozilla.org/>favorite website</a>
+
+    <!-- However, as soon as we add the title attribute in this way, there are problems: -->
+
+    <a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
+
+    <!--
+    As written above, the browser misinterprets the markup, mistaking the title attribute for three attributes:  a title attribute with the value The, and two Boolean attributes, Mozilla and homepage. Obviously, this is not intended! It will cause errors or unexpected behavior, -->
+
+    <!-- 4️⃣ Single or double quotes? 
+
+        Reference:https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#single_or_double_quotes 
+    -->
+
+    <a href="https://www.example.com">A link to my example.</a>
+    
+    <!-- In this article you will also notice that the attributes are wrapped in double quotes. However, you might see single quotes in some HTML code. This is a matter of style. You can feel free to choose which one you prefer. Both of these lines are equivalent: -->
+
+    <a href="https://www.example.com">A link to my example.</a>    
+
+    <!-- Don't use mix of both 👇🏻 -->
+    <!-- <a href="https://www.example.com'>A link to my example.</a> -->
+
+    <!-- 5️⃣ Typography - Use multiple heading tags where neccasary 
+
+        1. Preferably, you should use a single <h1> per page—this is the top level heading, and all others sit below this in the hierarchy.
+
+        2. Make sure you use the headings in the correct order in the hierarchy. Don't use <h3> elements to represent subheadings, followed by <h2> elements to represent sub-subheadings—that doesn't make sense and will lead to weird results.
+
+        3. Of the six heading levels available, you should aim to use no more than three per page, unless you feel it is necessary. Documents with many levels (i.e., a deep heading hierarchy) become unwieldy and difficult to navigate. On such occasions, it is advisable to spread the content over multiple pages if possible.
+     -->
+    
+</body>
+</html>

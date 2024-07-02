@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabindex attribute</title>
+  </head>
+  <body>
+    <!-- Question : What is tabindex ? 
+        
+    Answer : 
+
+        1. The tabindex attribute specifies the tab order of an element (when the "tab" button is used for navigating)
+
+        2. The tabindex attribute can be used on any HTML element.
+
+        3. Anchor tag, select, button, input are naturally focused element (which has tabindex="0"), 
+        so when you press tab you will see this element gets highlighted, but if you want to apply focus on normal element like h1 and p then use you can use tabindex attribute.
+
+        4. tabindex also used to manage the tab order, it accept integer (0, positive and negative) as input, setting tabindex number=1 means this element will be highlighted first even though other focused element present before, tabindex=2 means it will be focused right after 1st and so on (in-order).      
+
+        5. The tabindex attribute can destroy the usability of web content for keyboard users if used unnecessarly anywhere.
+
+        6. tabindex="0": Inserts an element into the natural tab order. The element can be focused by pressing the Tab key, and the element can be focused by calling its focus() method
+
+        7. tabindex="-1": Removes an element from the natural tab order, which means it will never be focused but the element can still be focused by calling its focus() method.
+
+        8. Order of Execution of tabfocus will be like this:
+            1. tabindex = 1
+            2. tabindex = 2
+            3. tabindex = 3
+            4. tabindex = 0, on colision the element present above in the dom get priority.
+
+        9. NOTE: Be careful, with messing around with the order, you could destroy the accessiblity for somebody, who's using a keyboard to navigating through the page.
+
+        10. One suggestion, Use semantic element which has default focused property, instead of using tabindex, if you've option. 
+
+        Reference: 
+            1. https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex
+            2. The tabindex Attribute in HTML - https://www.youtube.com/watch?v=aXoH3mkI27M
+    -->
+    <header>
+      <h1 tabindex="0">Main page [tabindex=0]</h1>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About us</li>
+          <li>Contact us</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <form>
+          <h2 tabindex="3">The form section [tabindex=3]</h2>
+
+          <div>
+            <label for="name">Name : </label>
+            <input type="text" id="name" tabindex="2" /> [tabindex=2]
+          </div>
+
+          <br />
+
+          <div>
+            <label for="age">age : </label>
+            <input type="number" id="age" tabindex="1" /> [tabindex=1]
+          </div>
+
+          <br />
+
+          <div>
+            <a href="#">Learn More</a>
+            <a href="#">Contact us</a><br />
+          </div>
+
+          <br />
+
+          <button type="submit">submit</button>
+        </form>
+      </section>
+      <aside>
+        <section>
+          <article>
+            <h3 tabindex="0">Article section [tabindex=0]</h3>
+            <p tabindex="-1">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
+              qui?
+              <strong>[tabindex=-1]</strong>
+            </p>
+            <label>Select a gender: </label>
+            <select>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </article>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; The localhost</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReactJS in HTML</title>
+    <!-- ReactJS CDN to load your React and Components into the ReactJs ecosystem. -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      defer
+    ></script>
+    <!-- ReactDOM to render your Components in the DOM Tree -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      defer
+    ></script>
+    <!-- Babel to transpile your JSX to simple JS so that all the browsers can read them -->
+    <script
+      src="https://unpkg.com/@babel/standalone/babel.min.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      /*
+       * A simple React component
+       */
+      const App = () => {
+        return (
+          <div>
+            <h1>Hello, React 👋🏻</h1>
+          </div>
+        );
+      };
+      /*
+       * Render the above component into the div#root
+       */
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<App />);
+    </script>
+  </body>
+</html>
